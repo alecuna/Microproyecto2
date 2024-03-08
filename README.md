@@ -1,7 +1,6 @@
 # Microproyecto2
 
-	En una situación hipotética, usted es amigo de Eustaquio; Eustaquio es el presidente del club de Videojuegos y le gustaría hacer una página web para atraer más personas a su club.
-	Eustaquio tiene un conjunto de requerimientos:
+Al presidente del club de Videojuegos y le gustaría hacer una página web para atraer más personas a su club y tiene un conjunto de requerimientos:
 - Cada club tiene un nombre, una descripción, y un listado de videojuegos.
 - Cada videojuego tiene un título, un género, una descripción.
 - Debe permitir a los usuarios tener acceso al listados de los juegos que ofrece dicho club.
