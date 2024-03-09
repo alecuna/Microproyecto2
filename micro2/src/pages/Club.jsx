@@ -19,7 +19,7 @@ export default function Club() {
           onChange={(e) => setDescription(e.target.value)}
         ></input>
       </label>
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit}>Submita</button>
     </div>
   );
 }

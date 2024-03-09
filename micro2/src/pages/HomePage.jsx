@@ -1,9 +1,16 @@
 import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "/src/firebase.js";
+import { useNavigate } from "react-router-dom"; // v6
 
 const HomePage = () => {
   const [items, setItems] = useState([]);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/club"); // Replace with your desired path
+  };
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -26,7 +33,9 @@ const HomePage = () => {
         {items.map((item) => (
           <li className=" clubBox" key={item.id}>
             {item.nombre}: {item.descripcion}
-            <button className="btn">Info</button>
+            <button className="btn" onClick={handleClick}>
+              Info
+            </button>
           </li> // Adjust based on your document fields
         ))}
       </ul>
