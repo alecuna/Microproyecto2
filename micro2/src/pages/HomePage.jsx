@@ -1,39 +1,53 @@
-const initialClubs = [
-  {
-    ID: "1",
-    nombre: "Club de Aventureros",
-    descripcion:
-      "Explora lugares misteriosos y descubre tesoros ocultos con otros entusiastas de la aventura.",
-    videojuegos: ["1", "3", "11"],
-  },
-  {
-    ID: "2",
-    nombre: "Club de Estrategia",
-    descripcion:
-      "Reúnete con estrategas brillantes para debatir tácticas, resolver enigmas y conquistar mundos virtuales.",
-    videojuegos: ["4", "15", "16"],
-  },
-];
+import { collection, getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { db } from "/src/firebase.js";
 
-export default function HomePage() {
+const HomePage = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      const itemsCollection = collection(db, "clubes");
+      const itemsSnapshot = await getDocs(itemsCollection);
+      const itemsList = itemsSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setItems(itemsList);
+    };
+
+    fetchItems();
+  }, []);
+
   return (
-    <aside>
-      <header className="header title">
-        Bienvenidos al club de videojuegos
-      </header>
-      <section className="facts-list">
-        <ul className="facts-list">
-          {initialClubs.map((club) => (
-            <A clubObj={club} />
-          ))}
-        </ul>
-      </section>
-    </aside>
+    <div>
+      <h1 className="title">Clubes</h1>
+      <ul>
+        {items.map((item) => (
+          <li className=" clubBox" key={item.id}>
+            {item.nombre}: {item.descripcion}
+            <button className="btn">Info</button>
+          </li> // Adjust based on your document fields
+        ))}
+      </ul>
+    </div>
   );
-}
+};
 
-function A(clubObj) {
-  <li key={clubObj.ID} className="fact">
-    {clubObj.nombre}
-  </li>;
-}
+export default HomePage;
+
+// export default function HomePage() {
+//   return (
+//     <aside>
+//       <header className="header title">
+//         Bienvenidos al club de videojuegos
+//       </header>
+//     </aside>
+//   );
+// }
+
+// function A(clubObj) {
+//   <li key={clubObj.ID} className="fact">
+//     {clubObj.nombre}
+//   </li>;
+// }
