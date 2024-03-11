@@ -19,7 +19,7 @@ function App() {
         <Route path="/logIn" element={<LogIn />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/miCuenta" element={<Profile />} />
-        <Route path="/club" element={<Club />} />
+        <Route path="/club/:id" element={<Club />} />
       </Routes>
     </section>
   );
