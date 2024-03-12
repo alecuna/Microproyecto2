@@ -74,11 +74,12 @@
   font-weight: bold;
   color: #f3f4f6;
   line-height: 1;
+  align-items: center;
   text-transform: uppercase;
   font-size: 16px;
   padding: 16px 16px 13px;
   width: 130px;
-  height: 50px;
+  height: 70px;
   background-image: linear-gradient(135deg, #db2777, #8b5cf6);
   border: none;
   border-radius: 100px;
@@ -116,12 +117,17 @@
 
 /* Style for each list item */
 .custom-list li {
-  padding: 8px; /* Adds space inside each item */
-  margin-bottom: 8px; /* Adds space between items */
-  background-color: #ffffff;
-  color: #333333; /* Dark grey text */
-  border: 6px solid #334155;
-  border-radius: 12px; /* Rounded corners for the border */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #f3f4f6;
+  color: #1e293b;
+  padding: 16px 24px;
+  border: 4px solid #1e293b;
+  border-radius: 20px;
 }
 
 /* Style for list items on hover */
@@ -246,10 +252,10 @@
 }
 
 .fact-form {
-  background-color: #475569;
+  background-color: #94a3b8;
   margin-bottom: 40px;
+  margin-top: 30px;
   padding: 16px 32px;
-  /* text-align: center; */
   display: flex;
   align-items: center;
   gap: 16px;
@@ -258,38 +264,35 @@
 
 .fact-form input,
 .fact-form select {
-  background-color: #94a3b8;
+  /* background-color: #334155; */
+  color: #1e293b;
   border: none;
   border-radius: 100px;
   padding: 14px;
-  color: inherit;
   font-size: 16px;
   font-family: inherit;
   font-weight: 600;
 }
 
-.fact-form input:first-child {
+/* .fact-form input:first-child {
   flex-grow: 1;
-}
+} */
 
 .fact-form input::placeholder {
-  color: #334155;
+  color: #1e293b;
+  font-size: 40px;
 }
 
-.fact-form span {
+/* .fact-form span {
   font-weight: bold;
   font-size: 18px;
-}
+} */
 
 @media (max-width: 1100px) {
   .fact-form {
     flex-direction: column;
     align-items: stretch;
   }
-}
-
-.hidden {
-  display: none;
 }
 
 ul {

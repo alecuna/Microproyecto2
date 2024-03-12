@@ -58,7 +58,14 @@ function Club() {
       <p className="title2"> Video Juegos: </p>
       <ul className="custom-list">
         {combinedList.map((item) => (
-          <li key={item.titulo}>{item.titulo}</li>
+          <li key={item.titulo}>
+            <span>
+              <strong>{item.titulo}:</strong> {item.descripcion}
+              <p>
+                <strong>Genero:</strong> {item.genero}
+              </p>
+            </span>
+          </li>
         ))}
       </ul>
       <button className="btn">Subscribir</button>

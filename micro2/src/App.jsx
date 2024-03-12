@@ -9,6 +9,7 @@ import SignUp from "./pages/SignUp";
 import Club from "./pages/Club";
 import Profile from "./pages/Profile";
 import Navbar from "./Navbar";
+import SearchJuegos from "./pages/SearchJuegos";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/miCuenta" element={<Profile />} />
         <Route path="/club/:id" element={<Club />} />
+        <Route path="/searchJuegos" element={<SearchJuegos />} />
       </Routes>
     </section>
   );

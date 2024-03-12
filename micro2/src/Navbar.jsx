@@ -24,6 +24,11 @@ function Navbar() {
             Mi Cuenta
           </Link>
         </li>
+        <li>
+          <Link className="link" to="/SearchJuegos">
+            Buscar Juegos
+          </Link>
+        </li>
       </ul>
     </nav>
   );
