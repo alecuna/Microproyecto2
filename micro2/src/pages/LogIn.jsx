@@ -30,13 +30,13 @@ export default function LogIn() {
     console.log(additionalInfo);
   }
 
-  async function mostrarDatos() {
-    if (user !== null) {
-      alert(user.displayName);
-    } else {
-      alert("no se ha iniciado sesion");
-    }
-  }
+  // async function mostrarDatos() {
+  //   if (user !== null) {
+  //     alert(user.displayName);
+  //   } else {
+  //     alert("no se ha iniciado sesion");
+  //   }
+  // }
 
   async function cerrarSesion() {
     await signOut(auth);
@@ -55,9 +55,9 @@ export default function LogIn() {
       <button className="btn" onClick={handleClick}>
         Iniciar sesion
       </button>
-      <button className="btn" onClick={mostrarDatos}>
+      {/* <button className="btn" onClick={mostrarDatos}>
         Mostrar datos
-      </button>
+      </button> */}
       <button className="btn" onClick={cerrarSesion}>
         Cerrar Sesion
       </button>
