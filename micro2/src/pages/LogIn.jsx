@@ -30,24 +30,24 @@ export default function LogIn() {
     console.log(additionalInfo);
   }
 
-  // async function mostrarDatos() {
-  //   if (user !== null) {
-  //     alert(user.displayName);
-  //   } else {
-  //     alert("no se ha iniciado sesion");
-  //   }
-  // }
+  async function mostrarDatos() {
+    if (user !== null) {
+      alert(user.displayName);
+    } else {
+      alert("no se ha iniciado sesion");
+    }
+  }
 
-  // async function cerrarSesion() {
-  //   await signOut(auth);
-  //   setUser(null);
-  // }
+  async function cerrarSesion() {
+    await signOut(auth);
+    setUser(null);
+  }
 
-  // useEffect(() => {
-  //   onAuthStateChanged(auth, (user) => {
-  //     setUser(user);
-  //   });
-  // });
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+  });
 
   return (
     <div>
