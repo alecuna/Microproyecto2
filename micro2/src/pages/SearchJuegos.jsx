@@ -30,7 +30,6 @@ export default function SearchJuegos() {
     game.titulo.toLowerCase().includes(searchQuery.toLocaleLowerCase())
   );
 
-  console.log(gameDetails);
   return (
     <div>
       <header className="title">Search Juegos</header>
